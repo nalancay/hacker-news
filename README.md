@@ -1,46 +1,21 @@
-# Getting Started with Create React App
+# Link webSite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Clickear este enlace para ver webSite de hacker-news](https://nalancay-hacker-news.netlify.app).
 
-## Available Scripts
+## Functional Use Cases
 
-In the project directory, you can run:
+✓ Show from the API the first 10 comments indexed in the list, retrieving information from the API of both the stories and their comments.\
+✓ When a story is clicked, you should see the comments and their children.\
+✓ Implementation of an infinite scroll for the 'top story'.\
+✓ Relative time elapsed in year, month, day, hour, minute and second, of the comments.
 
-### `npm start`
+## Technical requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+✓ [x] Use the [Hacker News API] (https://github.com/HackerNews/API), which is complex because of the way we have to get data using the ids.\
+✓ [x] Use components with style.\
+✓ [x] Implementation of React.Lazy so that it loads components when needed or is visible in the UI and wraps components with 'Suspense' since its calls are asynchronous.\
+✓ [x] Use placeholder (skeleton) while components are being loaded, ie it appears when you download certain data from the API being loaded and each placeholder is removed when each is finished loading. For this we use the react-content-loader library that allows you to create a skeleton of what it has to load. [link for React Content Loader](https://skeletonreact.com/) see the StoryLoader component.\
+✓ [x] Respect the comment indexation list, because we use "component level recursion" since they call themselves, then make a component recursive of a comment if it has children, re-fetch data and re-render a comment.\
+✓ [x] Make a SPA with wouter library for the router.\
+✓ [x] SWR library that helps us make API calls.\
+✓ [x] project made with React-TypeScript + SWR + styled-components
